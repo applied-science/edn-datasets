@@ -10,3 +10,13 @@
                                 {:fields [:eruption :waiting]})))
 
   )
+
+
+(comment ;;;; `iris`
+  (spit "resources/iris.edn"
+        (into [] (mcsv/read-csv "data/raw/iris.csv"
+                                {:fields [:sepal-length :sepal-width
+                                          :petal-length :petal-width
+                                          :species]})))
+
+  )
