@@ -1,0 +1,6 @@
+{:paths ["resources" "src"]
+ :deps {org.clojure/clojure {:mvn/version "1.10.1"}}
+ :aliases {:clerk {:extra-paths ["notebooks"]
+                   :extra-deps {io.github.nextjournal/clerk {:mvn/version "0.8.463"}
+                                meta-csv/meta-csv {:mvn/version "0.1.0"}
+                                metosin/jsonista {:mvn/version "0.2.5"}}}}}
