@@ -6,6 +6,7 @@
 
 (comment ;;;; `old-faithful`
   (spit "resources/old-faithful.edn"
-        (into [] (mcsv/read-csv "data/raw/old-faithful.csv")))
+        (into [] (mcsv/read-csv "data/raw/old-faithful.csv"
+                                {:fields [:eruption :waiting]})))
 
   )
