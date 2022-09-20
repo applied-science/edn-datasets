@@ -1,4 +1,5 @@
 (ns applied-science.edn-datasets
+  "Datasets in EDN (extensible data notation)"
   (:require [clojure.edn :as edn]
             [clojure.java.io :as io]))
 
