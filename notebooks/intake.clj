@@ -1,9 +1,7 @@
 (ns notebooks.intake
-  (:require [clojure.string :as string]
-            [jsonista.core :as json]
-            [meta-csv.core :as mcsv]
-            [nextjournal.clerk :as clerk]
-            [appliedsciencestudio.rdata :refer [read-rdata]]))
+  (:require #_[jsonista.core :as json]
+            [applied-science.edn-datasets :as edn-datasets]
+            [meta-csv.core :as mcsv]))
 
 (comment ;;; `old-faithful`
   (spit "resources/old-faithful.edn"
@@ -19,5 +17,12 @@
                                 {:fields [:sepal-length :sepal-width
                                           :petal-length :petal-width
                                           :species]})))
+
+  )
+
+
+(comment ;;; `anscombe`
+  (spit "resources/anscombe.edn"
+        edn-datasets/anscombe)
 
   )
