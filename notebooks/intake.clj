@@ -21,29 +21,3 @@
                                           :species]})))
 
   )
-
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;; R datasets
-
-(comment ;;; `mtcars`
-  ;; See https://search.r-project.org/R/refmans/datasets/html/mtcars.html
-
-  ;; Normally I'd just grab a CSV but I'd like to take this opportunity to show
-  ;; off the possibility of reading datasets found as rdata files directly from
-  ;; Clojure.
-
-  ;; I install R & RStudio. In RStudio:
-  ;;
-  ;;     install.packages("knitr") # purely to see graphical output
-  ;;     ?mtcars
-  ;;     mtcars # always a good idea to look at the data
-  ;;     save(mtcars,file="path/to/edn-datasets/data/raw/mtcars.rdata",version=2) # NB: without the optional `version` parameter, Renjin (and thus rdata) will not be able to read it
-
-  (def mtcars-raw
-    (read-rdata "data/raw/mtcars.rdata"))
-
-  (spit "resources/mtcars.edn" mtcars-raw)
-
-  )
