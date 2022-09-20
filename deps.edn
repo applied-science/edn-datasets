@@ -7,7 +7,7 @@
              "clojars" {:url "https://clojars.org/repo"}
              "bedatadriven" {:url "https://nexus.bedatadriven.com/content/groups/public/"}}
  :aliases {:clerk {:extra-paths ["notebooks"]
-                   :extra-deps {io.github.nextjournal/clerk {:mvn/version "0.8.463"}
+                   :extra-deps {io.github.nextjournal/clerk {:mvn/version "0.10.562"}
                                 meta-csv/meta-csv {:mvn/version "0.1.0"}
                                 metosin/jsonista {:mvn/version "0.2.5"}
                                 appliedsciencestudio/rdata {:git/url "https://github.com/appliedsciencestudio/rdata/"
