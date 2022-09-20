@@ -16,9 +16,9 @@
 
 – Pablo Neruda, _Enigmas_
 
-Datasets in [extensible data notation](https://github.com/edn-format/edn).
+Small datasets in [extensible data notation](https://github.com/edn-format/edn).
 
-For Clojurians who just want to grab Anscombe's quartet or Anderson's irises and get on with it, without worrying about CSV parsing or picking a JSON library.
+For Clojurians who just want to grab Anscombe's quartet or Anderson's irises and get on with it, without worrying about CSV parsing or picking a JSON library. Motivated in part by jealousy of R‘s built-in datasets.
 
 
 
@@ -33,6 +33,10 @@ applied-science/edn-datasets {:git/url "git@github.com:applied-science/edn-datas
 2. Add `[applied-science.edn-datasets :as data]` to your requires.
 
 3. Eval `data/anscombe` or another var, or access an EDN resource directly with something like `(clojure.java.io/resource "iris.edn")`
+
+
+#### Notebooks
+Inbound processing and small explorations or visualizations of the datasets may be documented in the *notebooks* directory, which is intended for use with [Clerk](https://github.com/nextjournal/clerk/).
 
 
 
