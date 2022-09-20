@@ -35,3 +35,23 @@
    {:x1 12 :x2 12 :x3 12 :x4  8 :y1 10.84 :y2 9.13 :y3  8.15 :y4  5.56}
    {:x1 7  :x2  7 :x3  7 :x4  8 :y1  4.82 :y2 7.26 :y3  6.42 :y4  7.91}
    {:x1 5  :x2  5 :x3  5 :x4  8 :y1  5.68 :y2 4.74 :y3  5.73 :y4  6.89}])
+
+
+(def ^{:doc "Motor Trend Car Road Tests: data extracted from the 1974 Motor Trend US magazine, comprising fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models). From R's built-in dataset; see https://search.r-project.org/R/refmans/datasets/html/mtcars.html"
+       :format "A single map from 11 (numeric) variables to 32 observations:
+mpg - Miles/(US) gallon
+cyl - Number of cylinders
+disp - Displacement (cu.in.)
+hp - Gross horsepower
+drat - Rear axle ratio
+wt - Weight (1000 lbs)
+qsec - 1/4 mile time
+vs - Engine (0 = V-shaped, 1 = straight)
+am - Transmission (0 = automatic, 1 = manual)
+gear - Number of forward gears
+carb - Number of carburetors
+
+Note: Henderson and Velleman (1981) comment in a footnote to Table 1: ‘Hocking [original transcriber]'s noncrucial coding of the Mazda's rotary engine as a straight six-cylinder engine and the Porsche's flat engine as a V engine, as well as the inclusion of the diesel Mercedes 240D, have been retained to enable direct comparisons to be made with previous analyses.’"
+       :source "Henderson and Velleman (1981), Building multiple regression models interactively. Biometrics, 37, 391–411."}
+  mtcars
+  (edn/read-string (slurp (io/resource "mtcars.edn"))))

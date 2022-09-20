@@ -1,6 +1,14 @@
 {:paths ["resources" "src"]
  :deps {org.clojure/clojure {:mvn/version "1.10.1"}}
+ ;; We set the repos explicitly only to get `bedatadriven` set up for rdata in
+ ;; the `clerk` alias. TODO Ideally this should live in some sort of (future)
+ ;; `mvn/extra-repos` keyval under that alias.
+ :mvn/repos {"central" {:url "https://repo1.maven.org/maven2/"}
+             "clojars" {:url "https://clojars.org/repo"}
+             "bedatadriven" {:url "https://nexus.bedatadriven.com/content/groups/public/"}}
  :aliases {:clerk {:extra-paths ["notebooks"]
                    :extra-deps {io.github.nextjournal/clerk {:mvn/version "0.8.463"}
                                 meta-csv/meta-csv {:mvn/version "0.1.0"}
-                                metosin/jsonista {:mvn/version "0.2.5"}}}}}
+                                metosin/jsonista {:mvn/version "0.2.5"}
+                                appliedsciencestudio/rdata {:git/url "https://github.com/appliedsciencestudio/rdata/"
+                                                            :sha "151e6dead06b38995f1f30b09d954a060f7a2a9c"}}}}}
