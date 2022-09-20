@@ -35,7 +35,7 @@
       (apply map vector (vals mtcars-raw)))
 
 
-;; It may be reasonable to want nicer names for our keys, and to de-code values.
+;; One might reasonably want nicer names for keys, and to de-code values.
 (let [mtcars' (-> mtcars-raw
                   (update "am" #(map {0.0 :auto, 1.0 :manual} %))
                   (update "vs" #(map {0.0 :v-shaped, 1.0 :straight} %))
@@ -55,4 +55,6 @@
         (repeat (map keyword (keys mtcars')))
         (apply map vector (vals mtcars'))))
 
-;; The resulting data has some vague similarities to `mtcars2` from `mtcars`'s docs.
+;; This result has some vague similarities to `mtcars2` from `mtcars`'s docs.
+
+;; TODO mimic R's docs by plotting mpg against displacement (DAL: also weight?), grouped (with color or parallel plots) by # cylinders
