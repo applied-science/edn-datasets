@@ -46,6 +46,20 @@
   (edn/read-string (slurp (io/resource "air-passengers.edn"))))
 
 
+(def ^{:doc "Annual measurements of the level, in feet, of Lake Huron 1875–1972."
+       :format "A sequence of maps describing a time series, with `level` in feet."
+       :source "Brockwell, P. J. and Davis, R. A. (1991). Time Series and Forecasting Methods. Second edition. Springer, New York. Series A, page 555./nBrockwell, P. J. and Davis, R. A. (1996). Introduction to Time Series and Forecasting. Springer, New York. Sections 5.1 and 7.6."}
+  lake-huron
+  (edn/read-string (slurp (io/resource "lake-huron.edn"))))
+
+
+(def ^{:doc "Populations Recorded by the US Census: the population of the United States (in millions) as recorded by the decennial census for the period 1790–1970."
+       :format "A sequence of maps describing a time series, with `n` in millions of people."
+       :source "McNeil, D. R. (1977) Interactive Data Analysis. New York: Wiley. "}
+  us-pop
+  (edn/read-string (slurp (io/resource "us-pop.edn"))))
+
+
 (def ^{:doc "Motor Trend Car Road Tests: data extracted from the 1974 Motor Trend US magazine, comprising fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models). From R's built-in dataset; see https://search.r-project.org/R/refmans/datasets/html/mtcars.html"
        :format "A single map from 11 (numeric) variables to 32 observations:
 mpg - Miles/(US) gallon
