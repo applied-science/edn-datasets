@@ -16,7 +16,7 @@
 
 – Pablo Neruda, _Enigmas_
 
-Small datasets in [extensible data notation](https://github.com/edn-format/edn).
+Small, ready-to-hand datasets, already in [extensible data notation](https://github.com/edn-format/edn).
 
 For Clojurians who just want to grab Anscombe's quartet or Anderson's irises and get on with it, without worrying about CSV parsing or picking a JSON library. Motivated in part by jealousy of R‘s built-in datasets.
 
