@@ -60,6 +60,19 @@
   (edn/read-string (slurp (io/resource "us-pop.edn"))))
 
 
+
+(def ^{:doc "Locations of Earthquakes off Fiji: the locations of 1000 seismic events of MB > 4.0. The events occurred in a cube near Fiji since 1964. There are two clear planes of seismic activity. One is a major plate junction; the other is the Tonga trench off New Zealand. These data constitute a subsample from a larger dataset of containing 5000 observations. From R's built-in dataset; see https://search.r-project.org/R/refmans/datasets/html/quakes.html"
+       :format "A sequence of maps describing 1000 observations on 5 variables:
+:lat      Latitude of event
+:long     Longitude
+:depth    Depth (km)
+:mag      Richter Magnitude
+:stations Number of stations reporting"
+       :source "This is one of the Harvard PRIM-H project data sets. They in turn obtained it from Dr. John Woodhouse, Dept. of Geophysics, Harvard University. "}
+  quakes
+  (edn/read-string (slurp (io/resource "quakes.edn"))))
+
+
 (def ^{:doc "Motor Trend Car Road Tests: data extracted from the 1974 Motor Trend US magazine, comprising fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models). From R's built-in dataset; see https://search.r-project.org/R/refmans/datasets/html/mtcars.html"
        :format "A single map from 11 (numeric) variables to 32 observations:
 mpg - Miles/(US) gallon
