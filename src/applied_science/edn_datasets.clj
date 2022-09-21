@@ -38,6 +38,14 @@
    {:x1 5  :x2  5 :x3  5 :x4  8 :y1  5.68 :y2 4.74 :y3  5.73 :y4  6.89}])
 
 
+
+(def ^{:doc "The classic Box & Jenkins airline data. Monthly totals of international airline passengers, 1949 to 1960. From R's built-in dataset; see https://search.r-project.org/R/refmans/datasets/html/AirPassengers.html"
+       :format "A sequence of maps describing a monthly time series, with `n` in thousands."
+       :source "Box, G. E. P., Jenkins, G. M. and Reinsel, G. C. (1976) Time Series Analysis, Forecasting and Control. Third Edition. Holden-Day. Series G."}
+  air-passengers
+  (edn/read-string (slurp (io/resource "air-passengers.edn"))))
+
+
 (def ^{:doc "Motor Trend Car Road Tests: data extracted from the 1974 Motor Trend US magazine, comprising fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models). From R's built-in dataset; see https://search.r-project.org/R/refmans/datasets/html/mtcars.html"
        :format "A single map from 11 (numeric) variables to 32 observations:
 mpg - Miles/(US) gallon
