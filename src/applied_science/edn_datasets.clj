@@ -91,3 +91,10 @@ Note: Henderson and Velleman (1981) comment in a footnote to Table 1: ‘Hocking
        :source "Henderson and Velleman (1981), Building multiple regression models interactively. Biometrics, 37, 391–411."}
   mtcars
   (edn/read-string (slurp (io/resource "mtcars.edn"))))
+
+
+(def ^{:doc "2009 Iranian presidential data, as reported by the Iranian government"
+       :format "Seq of maps describing vote totals, by province, for each of four candidates: Mahmoud Ahmadinejad, Mir-Hossein Mousavi, Mehdi Karroubi, and Mohsen Rezaee."
+       :source "University of Washington Computer Science & Engineering course materials: https://courses.cs.washington.edu/courses/cse140/13wi/homework/hw6/assignment.html"}
+  iran-election-2009
+  (edn/read-string (slurp (io/resource "iran-election-2009.edn"))))
