@@ -5,6 +5,11 @@
             [clojure.string :as str]
             [meta-csv.core :as mcsv]))
 
+;; # Intake
+
+;; How the EDN sausage gets made. See also `notebooks.r-datasets`.
+
+
 ;;; ## `old-faithful`
 (spit "resources/old-faithful.edn"
       (into [] (mcsv/read-csv "data/raw/old-faithful.csv"
