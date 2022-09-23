@@ -27,7 +27,7 @@ For Clojurians who just want to grab Anscombe's quartet or Anderson's irises and
 
 ```clojure
 applied-science/edn-datasets {:git/url "git@github.com:applied-science/edn-datasets.git"
-                              :sha "edc469e62f0e7f68b6a2b0e1d587702999be073b"}
+                              :sha "da3aa56886d4027d7ef6b3f91083e1833d3a4f93"}
 ```
 
 2. Add `[applied-science.edn-datasets :as data]` to your requires.
