@@ -38,6 +38,13 @@
    {:x1 5  :x2  5 :x3  5 :x4  8 :y1  5.68 :y2 4.74 :y3  5.73 :y4  6.89}])
 
 
+(def  ^{:doc "The Datasaurus Dozen: thirteen (!) artificial datasets with the same summary statistics (x/y mean, x/y standard deviation, and Pearson's correlation) to two decimal places."
+       :format "A seq of maps with x & y values, plus a dataset identifier"
+        :sources ["Justin Matejka, George Fitzmaurice, 'Same Stats, Different Graphs: Generating Datasets with Varied Appearance and Identical Statistics through Simulated Annealing', https://www.autodesk.com/research/publications/same-stats-different-graphs"
+                  "Alberto Cairo, 'Download the Datasaurus: Never trust summary statistics alone; always visualize your data', http://www.thefunctionalart.com/2016/08/download-datasaurus-never-trust-summary.html"]}
+  datasaurus-dozen
+  (edn/read-string (slurp (io/resource "datasaurus-dozen.edn"))))
+
 
 (def ^{:doc "The classic Box & Jenkins airline data. Monthly totals of international airline passengers, 1949 to 1960. From R's built-in dataset; see https://search.r-project.org/R/refmans/datasets/html/AirPassengers.html"
        :format "A sequence of maps describing a monthly time series, with `n` in thousands."
